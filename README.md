@@ -1,53 +1,42 @@
 # osint-investigator
 
-OpenClaw skill for public-footprint OSINT from a username or email.
+OpenClaw skill for broad, public-footprint OSINT across usernames, emails, domains, IPs, organisations, images, and related public entities.
 
 ## What it does
 
-- checks major public platforms
-- finds likely profile matches
-- correlates public signals
-- assigns a confidence level
-- exports structured JSON if needed
-- optionally checks an email against Have I Been Pwned with an API key
+- classifies the target type
+- selects relevant OSINT modules
+- checks public profiles and communities
+- enriches findings with web search
+- supports domain and IP checks
+- supports optional defensive HIBP checks for email addresses
+- captures public profile links and image URLs when available
+- exports JSON and supports structured reporting
 
-## Good use cases
+## Target types
 
-- map where a username appears publicly
-- check likely public accounts across platforms
-- correlate whether multiple public profiles may belong to the same person
-- produce a structured JSON summary
-- defensively check whether an email appears in known breaches
+- person
+- username / handle
+- email
+- domain / website
+- IP address
+- phone number
+- organisation / company
+- location / address
+- image
 
-## Included files
+## Included tooling
 
-- `SKILL.md`
-- `references/platforms.md`
-- `references/platform-validation.md`
-- `references/profile-media.md`
-- `references/scoring.md`
-- `references/variants.md`
-- `references/tooling.md`
-- `references/breach-checks.md`
-- `references/configuration.md`
-- `references/safety.md`
-- `references/output.md`
-- `scripts/generate_variants.py`
-- `scripts/check_profiles.py`
-- `scripts/check_hibp.py`
-- `scripts/export_json.py`
-
-## Optional HIBP setup
-
-Set:
-- `HIBP_API_KEY`
-
-Or store it in:
-- `~/.openclaw/secrets/hibp_api_key`
-
-See `references/configuration.md` for details.
+- username variant generation
+- multi-platform profile checking
+- optional HIBP email breach checking
+- domain helper
+- IP helper
+- result aggregation and scoring
+- JSON export
+- report builder
 
 ## Safety
 
-This skill is for public OSINT and defensive exposure checks only.
-It is not intended for doxxing, stalking, credential theft, or invasive tracking.
+This skill is for public OSINT and defensive investigation only.
+It is not intended for doxxing, stalking, credential theft, account takeover, or invasive tracking.
