@@ -1,4 +1,4 @@
-# username-email-investigator
+# osint-investigator
 
 OpenClaw skill for public-footprint OSINT from a username or email.
 
